@@ -68,52 +68,37 @@ public class JeopardyActivity extends Activity implements OnClickListener{
 
         if(id == plus200.getId()){
             money+=200;
-            score.setText(new Integer(money).toString());
         } else if(id == minus200.getId()){
             money-=200;
-            score.setText(new Integer(money).toString());
         } else if(id == plus400.getId()){
             money+=400;
-            score.setText(new Integer(money).toString());
         } else if(id == minus400.getId()){
             money-=400;
-            score.setText(new Integer(money).toString());
         } else if(id == plus600.getId()){
             money+=600;
-            score.setText(new Integer(money).toString());
         } else if(id == minus600.getId()){
             money-=600;
-            score.setText(new Integer(money).toString());
         } else if(id == plus800.getId()){
             money+=800;
-            score.setText(new Integer(money).toString());
         } else if(id == minus800.getId()){
             money-=800;
-            score.setText(new Integer(money).toString());
         } else if(id == plus1000.getId()){
             money+=1000;
-            score.setText(new Integer(money).toString());
         } else if(id == minus1000.getId()){
             money-=1000;
-            score.setText(new Integer(money).toString());
         } else if(id == plus1200.getId()){
             money+=1200;
-            score.setText(new Integer(money).toString());
         } else if(id == minus1200.getId()){
             money-=1200;
-            score.setText(new Integer(money).toString());
         } else if(id == plus1600.getId()){
             money+=1600;
-            score.setText(new Integer(money).toString());
         } else if(id == minus1600.getId()){
             money-=1600;
-            score.setText(new Integer(money).toString());
         } else if(id == plus2000.getId()) {
             money+=2000;
-            score.setText(new Integer(money).toString());
         } else if(id == minus2000.getId()){
             money-=2000;
-            score.setText(new Integer(money).toString());
         }
+        score.setText(new Integer(money).toString());
     }
 }
