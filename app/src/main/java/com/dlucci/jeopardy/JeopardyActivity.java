@@ -59,18 +59,17 @@ public class JeopardyActivity extends Activity implements OnClickListener{
         plus2000.setOnClickListener(this);
         minus2000.setOnClickListener(this);
 
-        money = Integer.valueOf(score.toString());
+        money = Integer.parseInt(score.getText().toString());
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
 
-
         if(id == plus200.getId()){
             money+=200;
             score.setText(new Integer(money));
-        } else if(id == minus200.getId()){
+        }/* else if(id == minus200.getId()){
             money-=200;
             score.setText(new Integer(money));
         } else if(id == plus400.getId()){
@@ -101,6 +100,6 @@ public class JeopardyActivity extends Activity implements OnClickListener{
 
         } else if(id == minus2000.getId()){
 
-        }
+        }*/
     }
 }
