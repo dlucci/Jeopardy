@@ -66,39 +66,39 @@ public class JeopardyActivity extends Activity implements OnClickListener{
     public void onClick(View v) {
         int id = v.getId();
 
-        if(id == plus200.getId()){
+        if(id == plus200.getId())
             money+=200;
-        } else if(id == minus200.getId()){
+        else if(id == minus200.getId())
             money-=200;
-        } else if(id == plus400.getId()){
+        else if(id == plus400.getId())
             money+=400;
-        } else if(id == minus400.getId()){
+        else if(id == minus400.getId())
             money-=400;
-        } else if(id == plus600.getId()){
+        else if(id == plus600.getId())
             money+=600;
-        } else if(id == minus600.getId()){
+        else if(id == minus600.getId())
             money-=600;
-        } else if(id == plus800.getId()){
+        else if(id == plus800.getId())
             money+=800;
-        } else if(id == minus800.getId()){
+        else if(id == minus800.getId())
             money-=800;
-        } else if(id == plus1000.getId()){
+        else if(id == plus1000.getId())
             money+=1000;
-        } else if(id == minus1000.getId()){
+        else if(id == minus1000.getId())
             money-=1000;
-        } else if(id == plus1200.getId()){
+        else if(id == plus1200.getId())
             money+=1200;
-        } else if(id == minus1200.getId()){
+        else if(id == minus1200.getId())
             money-=1200;
-        } else if(id == plus1600.getId()){
+        else if(id == plus1600.getId())
             money+=1600;
-        } else if(id == minus1600.getId()){
+        else if(id == minus1600.getId())
             money-=1600;
-        } else if(id == plus2000.getId()) {
+        else if(id == plus2000.getId())
             money+=2000;
-        } else if(id == minus2000.getId()){
+        else if(id == minus2000.getId())
             money-=2000;
-        }
+
         score.setText(new Integer(money).toString());
     }
 }

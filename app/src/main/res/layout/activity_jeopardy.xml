@@ -10,7 +10,6 @@
     android:id="@+id/gridLayout"
     android:rowCount="11"
     android:columnCount="2"
-    android:background=""
     >
     <TextView
         android:id="@+id/score"
