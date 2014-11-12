@@ -99,6 +99,6 @@ public class JeopardyActivity extends Activity implements OnClickListener{
         else if(id == minus2000.getId())
             money-=2000;
 
-        score.setText(new Integer(money).toString());
+        score.setText("$" + new Integer(money).toString());
     }
 }
