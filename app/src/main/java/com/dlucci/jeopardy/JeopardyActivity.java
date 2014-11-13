@@ -34,7 +34,9 @@ public class JeopardyActivity extends Activity implements OnClickListener{
 
     @InjectView(R.id.score) TextView score;
 
-    private int money;
+    private static int money;
+
+    private String filteredMoney;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +61,9 @@ public class JeopardyActivity extends Activity implements OnClickListener{
         plus2000.setOnClickListener(this);
         minus2000.setOnClickListener(this);
 
-        money = Integer.parseInt(score.getText().toString());
+        filteredMoney = score.getText().toString().substring(1);
+
+        money = Integer.parseInt(filteredMoney);
     }
 
     @Override
