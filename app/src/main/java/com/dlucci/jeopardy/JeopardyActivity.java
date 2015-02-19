@@ -2,13 +2,8 @@ package com.dlucci.jeopardy;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-import android.view.View.OnClickListener;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
