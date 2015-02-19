@@ -8,29 +8,23 @@ import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.InjectViews;
+import butterknife.OnClick;
 
 
-public class JeopardyActivity extends Activity implements OnClickListener{
+public class JeopardyActivity extends Activity{
 
-    @InjectView(R.id.plus200) Button plus200;
-    @InjectView(R.id.minus200) Button minus200;
-    @InjectView(R.id.plus400) Button plus400;
-    @InjectView(R.id.minus400) Button minus400;
-    @InjectView(R.id.plus600) Button plus600;
-    @InjectView(R.id.minus600) Button minus600;
-    @InjectView(R.id.plus800) Button plus800;
-    @InjectView(R.id.minus800) Button minus800;
-    @InjectView(R.id.plus1000) Button plus1000;
-    @InjectView(R.id.minus1000) Button minus1000;
-    @InjectView(R.id.plus1200) Button plus1200;
-    @InjectView(R.id.minus1200) Button minus1200;
-    @InjectView(R.id.plus1600) Button plus1600;
-    @InjectView(R.id.minus1600) Button minus1600;
-    @InjectView(R.id.plus2000) Button plus2000;
-    @InjectView(R.id.minus2000) Button minus2000;
+    @InjectViews({R.id.plus200, R.id.minus200, R.id.plus400, R.id.minus400, R.id.plus600,
+            R.id.minus600, R.id.plus800, R.id.minus800, R.id.plus1000,R.id.minus1000,
+            R.id.plus1200, R.id.minus1200, R.id.plus1600, R.id.minus1600, R.id.plus2000,
+            R.id.minus2000})
+    List<Button> buttonList;
 
     @InjectView(R.id.score) TextView score;
 
@@ -44,65 +38,18 @@ public class JeopardyActivity extends Activity implements OnClickListener{
         setContentView(R.layout.activity_jeopardy);
         ButterKnife.inject(this);
 
-        plus200.setOnClickListener(this);
-        minus200.setOnClickListener(this);
-        plus400.setOnClickListener(this);
-        minus400.setOnClickListener(this);
-        plus600.setOnClickListener(this);
-        minus600.setOnClickListener(this);
-        plus800.setOnClickListener(this);
-        minus800.setOnClickListener(this);
-        plus1000.setOnClickListener(this);
-        minus1000.setOnClickListener(this);
-        plus1200.setOnClickListener(this);
-        minus1200.setOnClickListener(this);
-        plus1600.setOnClickListener(this);
-        minus1600.setOnClickListener(this);
-        plus2000.setOnClickListener(this);
-        minus2000.setOnClickListener(this);
-
         filteredMoney = score.getText().toString().substring(1);
 
         money = Integer.parseInt(filteredMoney);
     }
 
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-
-        if(id == plus200.getId())
-            money+=200;
-        else if(id == minus200.getId())
-            money-=200;
-        else if(id == plus400.getId())
-            money+=400;
-        else if(id == minus400.getId())
-            money-=400;
-        else if(id == plus600.getId())
-            money+=600;
-        else if(id == minus600.getId())
-            money-=600;
-        else if(id == plus800.getId())
-            money+=800;
-        else if(id == minus800.getId())
-            money-=800;
-        else if(id == plus1000.getId())
-            money+=1000;
-        else if(id == minus1000.getId())
-            money-=1000;
-        else if(id == plus1200.getId())
-            money+=1200;
-        else if(id == minus1200.getId())
-            money-=1200;
-        else if(id == plus1600.getId())
-            money+=1600;
-        else if(id == minus1600.getId())
-            money-=1600;
-        else if(id == plus2000.getId())
-            money+=2000;
-        else if(id == minus2000.getId())
-            money-=2000;
-
+    @OnClick({R.id.plus200, R.id.minus200, R.id.plus400, R.id.minus400, R.id.plus600,
+            R.id.minus600, R.id.plus800, R.id.minus800, R.id.plus1000,R.id.minus1000,
+            R.id.plus1200, R.id.minus1200, R.id.plus1600, R.id.minus1600, R.id.plus2000,
+            R.id.minus2000})
+    public void clicked(Button b){
+        int value = new Integer((String) b.getText()).intValue();
+        money+=value;
         score.setText("$" + new Integer(money).toString());
     }
 }
